@@ -34,6 +34,7 @@ class Player(pygame.sprite.Sprite):
         self.rect.centerx = WIDTH / 2
         self.rect.bottom = HEIGHT - 10
         self.speedx = 0
+        self.speedy = 0
         self.shield =100
         self.shoot_delay = 250
         self.last_shot = pygame.time.get_ticks()
@@ -45,11 +46,16 @@ class Player(pygame.sprite.Sprite):
 
     def update(self):
         self.speedx = 0
+        self.speedy= 0
         keystate = pygame.key.get_pressed()
         if keystate[pygame.K_LEFT]:
             self.speedx = -8
         if keystate[pygame.K_RIGHT]:
             self.speedx = 8
+        if keystate[pygame.K_UP]:
+            self.speedy = -8
+        if keystate[pygame.K_DOWN]:
+            self.speedy = 8
 
         if keystate[pygame.K_SPACE]:
             self.shoot()
@@ -63,7 +69,13 @@ class Player(pygame.sprite.Sprite):
             self.rect.right=WIDTH
         if self.rect.left<0:
             self.rect.left=0
-        self.rect.x +=self.speedx
+        if self.rect.bottom > HEIGHT:
+            self.rect.bottom=HEIGHT
+        if self.rect.top<0:
+            self.rect.top=0
+
+        self.rect.x += self.speedx
+        self.rect.y += self.speedy
 
         if self.hidden and pygame.time.get_ticks() - self.hide_timer > 1000:
             self.hidden = False
@@ -79,11 +91,36 @@ class Player(pygame.sprite.Sprite):
                 bullet = Bullet(self.rect.centerx, self.rect.top)
                 all_sprites.add(bullet)
                 bullets.add(bullet)
-            if self.power >= 2:
+            if self.power == 2:
                 bullet1 = Bullet(self.rect.left, self.rect.centery)
                 bullet2 = Bullet(self.rect.right, self.rect.centery)
                 all_sprites.add(bullet1)
                 all_sprites.add(bullet2)
+                bullets.add(bullet1)
+                bullets.add(bullet2)
+                shoot_sound.play()
+            if self.power == 3:
+                bullet1 = Bullet(self.rect.left, self.rect.centery)
+                bullet2 = Bullet(self.rect.right, self.rect.centery)
+                bullet = Bullet(self.rect.centerx, self.rect.top)
+                all_sprites.add(bullet1)
+                all_sprites.add(bullet2)
+                all_sprites.add(bullet)
+                bullets.add(bullet)
+                bullets.add(bullet1)
+                bullets.add(bullet2)
+                shoot_sound.play()
+            if self.power >= 4:
+                bullet1 = Bullet(self.rect.left, self.rect.centery)
+                bullet2 = Bullet(self.rect.right, self.rect.centery)
+                bullet = Bullet(self.rect.centerx, self.rect.top)
+                bulletback = Bullet(self.rect.centerx, self.rect.top,10)
+                all_sprites.add(bullet1)
+                all_sprites.add(bullet2)
+                all_sprites.add(bullet)
+                all_sprites.add(bulletback)
+                bullets.add(bulletback)
+                bullets.add(bullet)
                 bullets.add(bullet1)
                 bullets.add(bullet2)
                 shoot_sound.play()
@@ -142,14 +179,14 @@ class Mob(pygame.sprite.Sprite):
 
 
 class Bullet(pygame.sprite.Sprite):
-    def __init__(self, x, y):
+    def __init__(self, x, y,speed=-10):
         pygame.sprite.Sprite.__init__(self)
         self.image = bullet_img
         self.image.set_colorkey(BLACK)
         self.rect = self.image.get_rect()
         self.rect.bottom = y
         self.rect.centerx = x
-        self.speedy = -10
+        self.speedy = speed
 
     def update(self):
         self.rect.y += self.speedy

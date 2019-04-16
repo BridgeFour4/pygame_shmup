@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="971fe1ed-f7aa-4563-9a29-28943af2e764" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snd/tgfcoder-FrozenJam-SeamlessLoop.ogg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shmup.py" beforeDir="false" afterPath="$PROJECT_DIR$/shmup.py" afterDir="false" />
     </list>
@@ -18,11 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shmup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="331" column="19" lean-forward="true" selection-start-line="331" selection-start-column="19" selection-end-line="331" selection-end-column="19" />
-              <folding>
-                <element signature="e#42#55#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="629">
+              <caret line="180" column="35" lean-forward="true" selection-start-line="180" selection-start-column="35" selection-end-line="180" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -48,8 +43,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="947" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1805" />
+    <option name="y" value="74" />
     <option name="width" value="982" />
     <option name="height" value="1047" />
   </component>
@@ -59,27 +55,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="pygame shmup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pygame shmup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pygame shmup" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pygame shmup" type="462c0819:PsiDirectoryNode" />
-              <item name="snd" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../falling game" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -167,14 +148,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="947" y="0" width="982" height="1047" extended-state="0" />
+    <frame x="1912" y="-426" width="1096" height="1896" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18432203" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16446126" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32932165" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32898468" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -214,11 +195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shmup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="331" column="19" lean-forward="true" selection-start-line="331" selection-start-column="19" selection-end-line="331" selection-end-column="19" />
-          <folding>
-            <element signature="e#42#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="629">
+          <caret line="180" column="35" lean-forward="true" selection-start-line="180" selection-start-column="35" selection-end-line="180" selection-end-column="35" />
         </state>
       </provider>
     </entry>
